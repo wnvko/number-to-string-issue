@@ -1,0 +1,32 @@
+﻿@page "/"
+@using SerializeNumberToStringIssue.Data
+@inject HttpClient HttpClient
+
+<div class="master-view-container row">
+    <table>
+       <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Postal Code</th>
+       </tr>
+       @foreach (var row in this.companies)
+        {
+           <tr>
+            <th>@row.CompanyName</th>
+            <th>@row.Address</th>
+            <th>@row.City</th>
+            <th>@row.PostalCode</th>
+           </tr>
+        }
+    </table>
+</div>
+
+@code {
+    private Customer[] companies = Array.Empty<Customer>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        companies = await HttpClient.GetFromJsonAsync<Customer[]>("sample-data/sample-data.json") ?? companies;
+    }
+}

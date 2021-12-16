@@ -1,0 +1,23 @@
+﻿[
+  {
+    "CustomerID": "ALFKI",
+    "CompanyName": "Alfreds Futterkiste",
+    "Address": "Obere Str. 57",
+    "City": "Berlin",
+    "PostalCode": 12209
+  },
+  {
+    "CustomerID": "AROUT",
+    "CompanyName": "Around the Horn",
+    "Address": "120 Hanover Sq.",
+    "City": "London",
+    "PostalCode": "WA1 1DP"
+  },
+  {
+    "CustomerID": "ANATR",
+    "CompanyName": "Ana Trujillo Emparedados y helados",
+    "Address": "Avda. de la Constitución 2222",
+    "City": "México D.F.",
+    "PostalCode": 5021
+  }
+]
